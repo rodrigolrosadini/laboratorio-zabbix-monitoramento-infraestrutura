@@ -78,20 +78,31 @@ A condição considera os registros que correspondem ao filtro do item. Portanto
 
 As tentativas de autenticação foram realizadas de forma controlada no ambiente virtual de laboratório.
 
-## Evidências
+## Evidências do laboratório
 
-### Coleta de logs SSH
+### 1. Coleta de logs SSH
 
-![Evidência da coleta de logs](evidencias/03-item-logs-ssh.png)
+O Zabbix recebe os registros de falhas de autenticação do Ubuntu Server por meio do agente ativo.
 
-### Alerta acionado
+![Coleta de logs SSH](evidencias/03-item-logs-ssh.png)
 
-![Evidência do alerta em PROBLEM](evidencias/04-alerta-problem.png)
+### 2. Alerta no dashboard de segurança
 
-### Recuperação do alerta
+O dashboard apresenta o alerta relacionado a possíveis tentativas suspeitas de autenticação SSH.
 
-![Evidência do alerta em Resolved](evidencias/05-alerta-resolved.png)
+![Alerta SSH no dashboard](evidencias/04-dashboard-alerta-ssh.png)
 
+### 3. Gatilho acionado
+
+A tela de problemas do Zabbix confirma a ativação do gatilho com severidade Warning.
+
+![Gatilho SSH em PROBLEM](evidencias/05-problems-trigger.png)
+
+### 4. Recuperação do alerta
+
+Após o encerramento do teste, o alerta foi apresentado como resolvido no dashboard.
+
+![Alerta SSH resolvido](evidencias/06-resolved-alert.png)
 ## Competências praticadas
 
 - Monitoramento de infraestrutura com Zabbix.
